@@ -22,8 +22,8 @@ ATMOS_PRESSURE = 1 * ureg.bar
 GRAVITY_ACCELLERATION = 9.8 * ureg.m/ureg.s**2
 
 
-
-piston_area = BORE_SIZE * math.pi * ureg.mm  # area is diameter * pi
+# area is diameter * pi
+piston_area = BORE_SIZE * math.pi * ureg.mm
 
 force_exerted = ((COMPRESSOR_PRESSURE - ATMOS_PRESSURE)*piston_area).to(ureg.newton)
 print("force exerted at each point of piston stroke:", force_exerted)
